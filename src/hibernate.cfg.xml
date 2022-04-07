@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">walid</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/comerciale?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.default_entity_mode">pojo</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <property name="hibernate.connection.pool_size">2</property>
+  <property name="hibernate.format_sql">true</property>
+  <property name="hibernate.enable_lazy_load_no_trans">true</property>
+  <mapping class="com.commerciale.model.user"/>
+  <mapping class="com.commerciale.model.Client"/>
+  <mapping class="com.commerciale.model.Supplier"/>
+  <mapping class="com.commerciale.model.Currency"/>
+  <mapping class="com.commerciale.model.Reception"/>
+  <mapping class="com.commerciale.model.ReceptionProduct"/>
+  <mapping class="com.commerciale.model.ProductGroup"/>
+  <mapping class="com.commerciale.model.Product"/>
+  <mapping class="com.commerciale.model.LineProduct"/>
+  <mapping class="com.commerciale.model.SaleConditions"/>
+  <mapping class="com.commerciale.model.Invoice"/>
+  <mapping class="com.commerciale.model.InvoiceProforma"/>
+  <mapping class="com.commerciale.model.LineProductProforma"/>
+  <mapping class="com.commerciale.model.Deposit"/>
+  <mapping class="com.commerciale.model.DataBackRes"/>
+ </session-factory>
+</hibernate-configuration>

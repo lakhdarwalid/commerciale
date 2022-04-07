@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReceptionReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="c41a074c-799c-4527-9b80-c086e3523113">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="642"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="357"/>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="customerDataSet" uuid="f04994c9-1b74-4c91-a6cf-a4b425e1cfd2">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+		<field name="adress" class="java.lang.String"/>
+		<field name="mf" class="java.lang.String"/>
+		<field name="rc" class="java.lang.String"/>
+		<field name="nis" class="java.lang.String"/>
+		<field name="artImpo" class="java.lang.String"/>
+		<field name="tel" class="java.lang.String"/>
+		<field name="email" class="java.lang.String"/>
+		<field name="banque" class="java.lang.String"/>
+		<field name="compte" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="custAddresseDataSet" uuid="0f3467d4-cf50-41b8-91d7-b2a10f764c83">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="adress" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="cusNameDataset" uuid="dfc16e81-6f29-499b-a2cc-55079ccf1a1f">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="cusBanqDataset" uuid="18dedf17-4ee5-4119-a83f-c4f60bce5eda">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="banque" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="CollectDepoParam" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource">
+		<defaultValueExpression><![CDATA[$P{CollectDepoParam}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CollectCust" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="CollectCustName" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="CollectCustBanq" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString language="hql">
+		<![CDATA[from Invoice]]>
+	</queryString>
+	<field name="amount" class="java.lang.Double"/>
+	<field name="depoLetter" class="java.lang.String"/>
+	<field name="depositDate" class="java.util.Date"/>
+	<field name="cheqNum" class="java.lang.String"/>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="1" width="292" height="20" forecolor="#1651DB" uuid="fd4311e8-f2dc-4459-876a-e1ac1b88846c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[  EURL LE COIN COPURCHIC  IMPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="21" width="438" height="20" uuid="ee4546c1-f5d3-4a52-90e6-784a27ebcc2f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Vente d’Équipement deSport- Conception et Aménagement des Espaces d'Entraînement ]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement isPrintRepeatedValues="false" x="3" y="1" width="81" height="67" uuid="e60885ca-238d-46ad-bab2-2402572a130d"/>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA["C:/CommercialRessources/res/image003.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="141" y="38" width="291" height="17" uuid="968a3f66-3c28-4568-a00f-c918e13cea02"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cité Laararssa Local Nº33 ET Nº34, 19000, Sétif Algérie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="51" width="245" height="17" uuid="bf00ca08-63bd-4801-a495-593c41763434"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tél : +213 36 53 13 94  / + 213 550 08 86 95 /  Email :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="51" width="104" height="17" forecolor="#3663D6" uuid="0e24f857-4f76-4976-937c-d2ff56ef2f3f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[teljualgeria@telju.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="72" width="555" height="1" uuid="af71a371-5ae2-4c0d-8626-a8e43262cb1f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="175" splitType="Stretch">
+			<staticText>
+				<reportElement x="220" y="40" width="153" height="30" uuid="b64dc3c1-4402-40d0-93cd-1583bd423f8f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REÇU DE PAIEMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="0" width="44" height="20" uuid="45a7674a-1f51-4667-b553-5cb9be52da73"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[Sétif le :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="477" y="0" width="78" height="20" uuid="b77704ba-4365-4e3d-8c90-26e6df66fcd4"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{depositDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="97" width="111" height="21" uuid="2521d9ed-cd0f-4216-a0db-10be50a2ca27"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reçu émis au nom de :]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="20" y="118" width="510" height="42" uuid="fbcfc604-0c18-4ac5-906b-c760b9bbbd9a"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="customerDataSet" uuid="46109d0f-f209-4aaa-952b-4554584fd40e">
+						<dataSourceExpression><![CDATA[$P{CollectCust}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="42" width="510">
+						<textField>
+							<reportElement x="80" y="0" width="410" height="20" uuid="3d591797-2414-4fb8-aa88-964fd55567ea"/>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="21" width="50" height="21" uuid="a4eba291-e556-4724-8255-b0027c724060"/>
+							<textElement>
+								<font isBold="true"/>
+							</textElement>
+							<text><![CDATA[Adresse :]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="0" y="0" width="80" height="21" uuid="96936a2b-979e-4c66-9b22-a04d14ec22db"/>
+							<textElement>
+								<font isBold="true"/>
+							</textElement>
+							<text><![CDATA[Mlle,  Mme, Mr;]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="50" y="21" width="440" height="20" uuid="eb1b9cdf-9bfe-4536-9ee8-c1a94c9789d3"/>
+							<textFieldExpression><![CDATA[$F{adress}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="296">
+			<staticText>
+				<reportElement x="20" y="20" width="510" height="18" uuid="6dfd3fdd-317d-4448-a34f-bdc60c3ad283"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" rotation="None">
+					<paragraph lineSpacing="1_1_2" lineSpacingSize="1.0"/>
+				</textElement>
+				<text><![CDATA[      Je soussigné Monsieur Brahim MATOUG, gérant d’EURL Le Coin Copurchic Import, reconnaît avoir reçule  montant de                                   DA.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="55" width="456" height="20" uuid="3fe4c658-a891-4055-877a-474d4e008174"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{depoLetter}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="74" width="70" height="15" uuid="1153b01e-c318-4e10-be2d-e71f713815b2"/>
+				<text><![CDATA[de Monsieur : ]]></text>
+			</staticText>
+			<textField pattern="#,##0.00#;(#,##0.00#)">
+				<reportElement x="91" y="37" width="94" height="18" uuid="a77d3c70-6a50-4d13-b7ee-1464169ab965"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="94" width="509" height="36" uuid="ba8e6069-6681-404a-9c65-a06933e7b1b7"/>
+				<textElement textAlignment="Justified">
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[      Le montant reçu sous forme de chèque représente un dépôt / avance pour l’achat du matériel de sport et musculation.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="84" y="131" width="376" height="18" uuid="bc8bcea3-2650-4df8-a1a2-9290b87f8807"/>
+				<textFieldExpression><![CDATA[$F{cheqNum}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="130" width="64" height="18" uuid="e4d543a6-d449-475f-a683-5c5edb2c8d72"/>
+				<text><![CDATA[Cheque No :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="149" width="50" height="23" uuid="077cb76c-01e4-4d9c-8eb1-f96d52958c1d"/>
+				<text><![CDATA[Banque : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="37" width="220" height="20" uuid="cbae2f71-b07d-4cb4-a9d9-f5cc815e5965"/>
+				<text><![CDATA[ le  montant de                                   DA.]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="84" y="74" width="391" height="16" uuid="3c33d55e-5072-4b07-abd8-2134191f9c57"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="cusNameDataset" uuid="1a320aa8-f52f-43a2-8310-3b841291a392">
+						<dataSourceExpression><![CDATA[$P{CollectCustName}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="16" width="391">
+						<textField>
+							<reportElement x="0" y="0" width="391" height="16" uuid="5dc3c4c2-6d9a-49e7-836e-48d73d126b13"/>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="70" y="150" width="440" height="23" uuid="4c349fff-5e56-4942-a4c3-66d6bc0e67ea"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="cusBanqDataset" uuid="8d316987-74d4-43d5-9cc1-653c6c9eee5f">
+						<dataSourceExpression><![CDATA[$P{CollectCustBanq}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="23" width="440">
+						<textField>
+							<reportElement x="0" y="0" width="440" height="23" uuid="f8e37332-5918-425d-9c25-17a29d70fb55"/>
+							<textFieldExpression><![CDATA[$F{banque}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="20" y="219" width="510" height="20" uuid="fccfba2e-b667-4654-9829-8ced890609f2"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[EURL Le Coin Copurchic Import                                                                                    Client(e)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="260" width="140" height="1" uuid="18902709-17c5-4daa-9aea-e81297b75d33">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="360" y="260" width="140" height="1" uuid="31341874-9f94-4db8-893c-f73371f89831">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="25" y="265" width="122" height="24" uuid="f0de5575-4fca-4a01-a497-951d61d5be88"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="265" width="122" height="24" uuid="c5004686-6ece-45f0-8a34-89aa664e10e8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="83" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="32" width="555" height="1" uuid="a0b32ea5-35ce-4d0c-be07-c6bf566de390">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="190" y="2" width="180" height="18" forecolor="#3D7CF2" uuid="43d48ec7-f479-46c2-82e9-17e7878c2855"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EURL Le Coin Copurchic Import]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="16" width="206" height="16" uuid="131c088e-61d3-445c-a22f-8cf34974b638"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Représentant Exclusif Telju Fitness S.L]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="34" width="383" height="23" uuid="1550291a-2b72-4059-9048-c78458ecb643"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[R.N.C :19/00- 19B 0093820 / N.I.F :001919009382034 / N.I.C :001919010029651 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="48" width="373" height="15" uuid="8f08bfae-d672-4ce7-aa6c-34d2689e8df1"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Compte Bancaire NATIXIS - AGENCE 020 / N° de compte :  7400192001-46]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
